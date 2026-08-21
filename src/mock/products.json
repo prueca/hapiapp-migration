@@ -1,0 +1,232 @@
+[
+  {
+    "name": "Selecta Supreme Cookies & Cream",
+    "description": "Creamy vanilla ice cream blended with chunks of cream-filled chocolate cookies.",
+    "category": "Multi-Serve Tubs",
+    "price": 350,
+    "currency": "PHP",
+    "size_value": 1.4,
+    "size_unit": "L",
+    "packaging": "Tub"
+  },
+  {
+    "name": "Selecta Supreme Double Dutch",
+    "description": "French Vanilla ice cream generously loaded with cashews, chocolate chips, and marshmallows.",
+    "category": "Multi-Serve Tubs",
+    "price": 350,
+    "currency": "PHP",
+    "size_value": 1.4,
+    "size_unit": "L",
+    "packaging": "Tub"
+  },
+  {
+    "name": "Selecta Supreme Rocky Road",
+    "description": "Rich chocolate ice cream base packed with peanuts, chocolate chips, and soft marshmallows.",
+    "category": "Multi-Serve Tubs",
+    "price": 350,
+    "currency": "PHP",
+    "size_value": 1.4,
+    "size_unit": "L",
+    "packaging": "Tub"
+  },
+  {
+    "name": "Selecta Supreme Coffee Crumble",
+    "description": "Creamy coffee ice cream made with Monk's Blend Coffee folded with chocolate chips and cashew nuts.",
+    "category": "Multi-Serve Tubs",
+    "price": 350,
+    "currency": "PHP",
+    "size_value": 1.4,
+    "size_unit": "L",
+    "packaging": "Tub"
+  },
+  {
+    "name": "Selecta Super Thick Mango",
+    "description": "Savor the vibrant and authentic flavors of the Philippines crafted with real mangoes.",
+    "category": "Multi-Serve Tubs",
+    "price": 350,
+    "currency": "PHP",
+    "size_value": 1.4,
+    "size_unit": "L",
+    "packaging": "Tub"
+  },
+  {
+    "name": "Selecta Super Thick Ube Royale",
+    "description": "Smooth and creamy local ube flavor crafted using authentic Kinampay Ube.",
+    "category": "Multi-Serve Tubs",
+    "price": 350,
+    "currency": "PHP",
+    "size_value": 1.4,
+    "size_unit": "L",
+    "packaging": "Tub"
+  },
+  {
+    "name": "Selecta Super Thick Vanilla",
+    "description": "Classic sweet vanilla ice cream oozing with extra-thick local creaminess.",
+    "category": "Multi-Serve Tubs",
+    "price": 485,
+    "currency": "PHP",
+    "size_value": 3.8,
+    "size_unit": "L",
+    "packaging": "Gallon"
+  },
+  {
+    "name": "Selecta Special Quezo Real",
+    "description": "A savory-sweet traditional local delicacy featuring a rich, creamy cheese ice cream base.",
+    "category": "Multi-Serve Tubs",
+    "price": 350,
+    "currency": "PHP",
+    "size_value": 1.3,
+    "size_unit": "L",
+    "packaging": "Tub"
+  },
+  {
+    "name": "Selecta Supreme 2-in-1 Cookie & Cream + Double Dutch",
+    "description": "Two delicious bestselling flavors combined side-by-side in one convenient pack.",
+    "category": "Combination Packs",
+    "price": 350,
+    "currency": "PHP",
+    "size_value": 1.4,
+    "size_unit": "L",
+    "packaging": "Tub"
+  },
+  {
+    "name": "Selecta Hershey's Choco Milk Almond",
+    "description": "Premium collaborative flavor blending Hershey's milk chocolate ice cream with roasted almond pieces.",
+    "category": "Specialty Tubs",
+    "price": 415,
+    "currency": "PHP",
+    "size_value": 1.3,
+    "size_unit": "L",
+    "packaging": "Tub"
+  },
+  {
+    "name": "Selecta Limited Edition Tres Leches Pint",
+    "description": "Personal-sized version of the traditional milk-soaked cake-flavored dessert series.",
+    "category": "Limited Edition",
+    "price": 155,
+    "currency": "PHP",
+    "size_value": 473,
+    "size_unit": "ml",
+    "packaging": "Pint"
+  },
+  {
+    "name": "Selecta 3-in-1 Birthday Ice Cream",
+    "description": "Celebratory combination party tub featuring three popular staple ice cream flavors.",
+    "category": "Combination Packs",
+    "price": 140,
+    "currency": "PHP",
+    "size_value": 750,
+    "size_unit": "ml",
+    "packaging": "Tub"
+  },
+  {
+    "name": "Selecta Creamdae Cookies & Rocky Road",
+    "description": "An affordable multi-flavor value combination pack featuring two classic chocolate profiles.",
+    "category": "Combination Packs",
+    "price": 245,
+    "currency": "PHP",
+    "size_value": 1.3,
+    "size_unit": "L",
+    "packaging": "Tub"
+  },
+  {
+    "name": "Selecta Cornetto Chocolate",
+    "description": "Creamy chocolate ice cream topped with chocolate sauce and choco chips, wrapped in a golden wafer cone and ending in a crunchy choco tip.",
+    "category": "Single-Serve Novelties",
+    "price": 30,
+    "currency": "PHP",
+    "size_value": 110,
+    "size_unit": "ml",
+    "packaging": "Cone"
+  },
+  {
+    "name": "Selecta Cornetto Vanilla",
+    "description": "Creamy vanilla ice cream topped with chocolate sauce and crunchy nuts, wrapped in a golden wafer cone and ending in a crunchy choco tip.",
+    "category": "Single-Serve Novelties",
+    "price": 30,
+    "currency": "PHP",
+    "size_value": 110,
+    "size_unit": "ml",
+    "packaging": "Cone"
+  },
+  {
+    "name": "Selecta Cornetto Cookies & Dream",
+    "description": "Creamy cookies & cream ice cream topped with chocolate sauce and chunky cookies bits, wrapped in a golden wafer cone and ending in a crunchy choco tip.",
+    "category": "Single-Serve Novelties",
+    "price": 30,
+    "currency": "PHP",
+    "size_value": 110,
+    "size_unit": "ml",
+    "packaging": "Cone"
+  },
+  {
+    "name": "Selecta Cornetto Ube Caramel",
+    "description": "Creamy Ube-Flavored and Vanilla Ice Cream topped with caramel sauce and candied peanuts, wrapped in a golden wafer cone.",
+    "category": "Single-Serve Novelties",
+    "price": 30,
+    "currency": "PHP",
+    "size_value": 110,
+    "size_unit": "ml",
+    "packaging": "Cone"
+  },
+  {
+    "name": "Selecta Cornetto Disc Black Choco Cookie",
+    "description": "Creamy Chocolate Ice Cream topped with a fudgy Black Choco Disc and Choco Cookie Bits.",
+    "category": "Single-Serve Novelties",
+    "price": 35,
+    "currency": "PHP",
+    "size_value": 120,
+    "size_unit": "ml",
+    "packaging": "Cone"
+  },
+  {
+    "name": "Selecta Cornetto Disc Matcha Crumble",
+    "description": "Creamy Matcha Cookies and Vanilla Ice Cream topped with a fudgy Matcha Choco Disc and Butter Cookies.",
+    "category": "Single-Serve Novelties",
+    "price": 35,
+    "currency": "PHP",
+    "size_value": 120,
+    "size_unit": "ml",
+    "packaging": "Cone"
+  },
+  {
+    "name": "Selecta Magnum Cookies & Cream",
+    "description": "Premium white chocolate cookie ice cream stick base dipped entirely in a hard dark chocolate cookie shell.",
+    "category": "Premium Novelties",
+    "price": 112,
+    "currency": "PHP",
+    "size_value": 80,
+    "size_unit": "ml",
+    "packaging": "Stick"
+  },
+  {
+    "name": "Magnum Mini Classic (Box of 6)",
+    "description": "Premium multipack containing six snack-sized vanilla ice cream bars coated in a thick shell of Belgian milk chocolate.",
+    "category": "Premium Novelties",
+    "price": 350,
+    "currency": "PHP",
+    "size_value": 6,
+    "size_unit": "pieces",
+    "packaging": "Box"
+  },
+  {
+    "name": "Selecta Cup Boom Boom Chocolate",
+    "description": "Fun, grab-and-go snack cup filled with rich chocolate ice cream perfect for a quick snack.",
+    "category": "Single-Serve Novelties",
+    "price": 25,
+    "currency": "PHP",
+    "size_value": 80,
+    "size_unit": "ml",
+    "packaging": "Cup"
+  },
+  {
+    "name": "Selecta Fruit Slice Watermelon",
+    "description": "Refreshing water ice pop snack shaped like a real slice of fruit.",
+    "category": "Single-Serve Novelties",
+    "price": 15,
+    "currency": "PHP",
+    "size_value": 60,
+    "size_unit": "ml",
+    "packaging": "Stick"
+  }
+]

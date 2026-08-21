@@ -1,0 +1,26 @@
+{
+    "name": "hapiapp-migration",
+    "version": "1.0.0",
+    "main": "./src/index.ts",
+    "license": "MIT",
+    "scripts": {
+        "start": "tsx ./src/index.ts"
+    },
+    "dependencies": {
+        "@inquirer/prompts": "^8.3.0",
+        "argon2": "^0.45.1",
+        "dotenv": "^17.4.2",
+        "lodash": "^4.17.23",
+        "pg": "^8.23.0",
+        "pg-hstore": "^2.3.4",
+        "sequelize": "^6.37.7",
+        "tsconfig-paths": "^4.2.0",
+        "tsx": "^4.21.0",
+        "ulid": "^3.0.2",
+        "zod": "^4.4.3"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.17.23",
+        "@types/node": "^25.0.10"
+    }
+}
