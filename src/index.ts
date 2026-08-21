@@ -1,13 +1,17 @@
 import 'dotenv/config'
 import { select } from '@inquirer/prompts'
 
-const script = './script'
+const source = './script'
 
 const run = async () => {
     const choices = [
         {
             name: 'Populate account table',
-            value: `${script}/populate.account.ts`,
+            value: `${source}/populate.account.ts`,
+        },
+        {
+            name: 'Populate user table',
+            value: `${source}/populate.user.ts`,
         },
     ]
 

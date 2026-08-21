@@ -10,19 +10,17 @@ import Logger from '@/lib/logger'
 const FRESH = true
 const SOURCE = '@/mock/accounts.json'
 
-const logger = new Logger('Account')
+const logger = new Logger('populate:account')
 
 export default async () => {
     const txn = await sequelize.transaction()
 
     try {
+        logger.print('Establishing database connection...')
         await sequelize.authenticate()
 
-        logger.print('Database connection established.')
-
+        logger.print('Creating table...')
         await db.Account.sync({ force: FRESH })
-
-        logger.print('Table has been created.')
 
         const schema = z
             .object({
@@ -76,7 +74,6 @@ export default async () => {
         })
 
         accounts = await db.Account.bulkCreate(accounts, { transaction: txn })
-
         logger.print(`Inserted ${accounts.length} records.`)
 
         /**
@@ -102,5 +99,6 @@ export default async () => {
         await txn.rollback()
 
         logger.print(e.message)
+        logger.print(e.stack)
     }
 }
