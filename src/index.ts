@@ -13,6 +13,10 @@ const run = async () => {
             name: 'Populate user table',
             value: `${source}/populate.user.ts`,
         },
+        {
+            name: 'Populate access table',
+            value: `${source}/populate.access.ts`,
+        },
     ]
 
     const answer = await select({
