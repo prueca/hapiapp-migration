@@ -67,6 +67,7 @@ class User extends Model {
     declare firstName: string
     declare middleName: string
     declare lastName: string
+    declare phone: string
     declare username: string
     declare password: string
     declare address: string
