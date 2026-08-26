@@ -2,17 +2,35 @@ import 'dotenv/config'
 import _ from 'lodash'
 import z from 'zod'
 import * as argon2 from 'argon2'
+import path from 'node:path'
 
 import db, { sequelize } from '@/lib/db'
 import userRoles from '@/lib/user.roles'
 import Logger from '@/lib/logger'
-
-const FRESH = true
-const SOURCE = '@/mock/users.json'
+import read from '@/lib/source.reader'
 
 const logger = new Logger('populate:user')
 
+const schema = z.object({
+    id: z.ulid(),
+    role: z.enum([
+        userRoles.DISTRIBUTOR_ADMIN,
+        userRoles.DISTRIBUTOR_USER,
+        userRoles.DEALER_ADMIN,
+        userRoles.DEALER_USER,
+        userRoles.FRANCHISEE_ADMIN,
+        userRoles.FRANCHISEE_USER,
+    ]),
+    firstName: z.string().nonempty(),
+    middleName: z.string().nonempty(),
+    lastName: z.string().nonempty(),
+    username: z.string().nonempty(),
+    password: z.string().nonempty(),
+})
+
 export default async () => {
+    const source = path.join(__dirname, '../mock/user.csv')
+    const forceSync = true
     const txn = await sequelize.transaction()
 
     try {
@@ -20,48 +38,24 @@ export default async () => {
         await sequelize.authenticate()
 
         logger.print('Creating table...')
-        await db.User.sync({ force: FRESH })
-
-        const schema = z.object({
-            id: z.ulid(),
-            role: z.enum([
-                userRoles.DISTRIBUTOR_ADMIN,
-                userRoles.DISTRIBUTOR_USER,
-                userRoles.DEALER_ADMIN,
-                userRoles.DEALER_USER,
-                userRoles.FRANCHISEE_ADMIN,
-                userRoles.FRANCHISEE_USER,
-            ]),
-            firstName: z.string().nonempty(),
-            middleName: z.string().nonempty(),
-            lastName: z.string().nonempty(),
-            username: z.string().nonempty(),
-            password: z.string().nonempty(),
-        })
+        await db.User.sync({ force: forceSync })
 
         /**
          * Populate table
          */
 
-        const mock: Json[] = (await import(SOURCE)).default
+        let users = await read(source)
 
-        let users = await Promise.all(
-            _.map(mock, async (item) => {
-                let record: Json = _.pick(item, [
-                    'id',
-                    'role',
-                    'first_name',
-                    'middle_name',
-                    'last_name',
-                    'username',
-                    'password',
-                ])
+        users = await Promise.all(
+            _.map(users, async (x) => {
+                x = _.mapKeys(x, (v, k) => _.camelCase(k))
+                const { data, error } = schema.safeParse(x)
 
-                record = _.mapKeys(record, (v, k) => _.camelCase(k))
-                record = schema.parse(record)
-                record.password = await argon2.hash(record.password)
+                if (error) throw error
 
-                return record
+                data.password = await argon2.hash(data.password)
+
+                return data
             }),
         )
 

@@ -1,14 +1,13 @@
 import _ from 'lodash'
 import z from 'zod'
 import { Op } from 'sequelize'
-import { parse } from 'csv-parse'
-import fs from 'node:fs'
 import path from 'node:path'
 
 import db, { sequelize } from '@/lib/db'
 import ulid from '@/lib/ulid'
 import accountTypes from '@/lib/account.types'
 import Logger from '@/lib/logger'
+import read from '@/lib/source.reader'
 
 const logger = new Logger('populate:account')
 
@@ -37,46 +36,6 @@ const schema = z
         return data.associateId !== null && ulid.isValid(data.associateId)
     })
 
-const read = async (source: string) => {
-    const ext = source.split('.').pop()
-    let arr: Json[] = []
-
-    switch (ext) {
-        case 'csv':
-            await new Promise((resolve, reject) => {
-                fs.createReadStream(source)
-                    .pipe(
-                        parse({
-                            columns: true,
-                            skip_empty_lines: true,
-                            bom: true,
-                        }),
-                    )
-                    .on('end', () => resolve(arr))
-                    .on('error', (error) => reject(error))
-                    .on('data', (row) => {
-                        const record = _.mapKeys(row, (v, k) => _.camelCase(k))
-                        const { data, error } = schema.safeParse(record)
-
-                        if (error) throw error
-
-                        if (data.type === accountTypes.DISTRIBUTOR) {
-                            data.associateId = null
-                        }
-
-                        arr.push(data)
-                    })
-            })
-            break
-
-        case 'json':
-            arr = (await import(source)).default
-            break
-    }
-
-    return arr
-}
-
 export default async () => {
     const source = path.join(__dirname, '../mock/account.csv')
     const forceSync = true
@@ -94,6 +53,20 @@ export default async () => {
          */
 
         let accounts: Json[] = await read(source)
+
+        accounts = _.map(accounts, (x) => {
+            x = _.mapKeys(x, (v, k) => _.camelCase(k))
+            const { data, error } = schema.safeParse(x)
+
+            if (error) throw error
+
+            if (data.type === accountTypes.DISTRIBUTOR) {
+                data.associateId = null
+            }
+
+            return data
+        })
+
         accounts = await db.Account.bulkCreate(accounts, { transaction })
 
         logger.print(`Inserted ${accounts.length} records.`)
