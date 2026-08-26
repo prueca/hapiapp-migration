@@ -30,10 +30,10 @@ export default async () => {
          * Populate table
          */
 
-        const mock: PlainObject[] = (await import(SOURCE)).default
+        const mock: Json[] = (await import(SOURCE)).default
 
         let access = _.map(mock, (item) => {
-            let record: PlainObject = {
+            let record: Json = {
                 userId: item.id,
                 accountId: item.account_id,
             }

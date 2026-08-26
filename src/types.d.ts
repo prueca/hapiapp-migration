@@ -1,3 +1,3 @@
-type PlainObject = {
+type Json = {
     [key: string]: any
 }

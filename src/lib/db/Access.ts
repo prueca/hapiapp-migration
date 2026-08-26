@@ -47,7 +47,7 @@ class Access extends Model {
     declare user?: User
     declare account?: Account
 
-    static associate(models: PlainObject) {
+    static associate(models: Json) {
         this.belongsTo(models.User, {
             as: 'user',
             foreignKey: 'userId',

@@ -17,33 +17,40 @@ const attributes = {
         allowNull: false,
     },
     address: {
-        type: DataTypes.STRING,
-        allowNull: false,
+        type: DataTypes.TEXT,
     },
     phone: {
-        type: DataTypes.STRING,
-        allowNull: false,
+        type: DataTypes.STRING(32),
     },
     isrCode: {
-        type: DataTypes.STRING,
-        allowNull: false,
+        type: DataTypes.STRING(20),
+        field: 'isr_code',
     },
     sapCode: {
-        type: DataTypes.STRING,
-        allowNull: false,
+        type: DataTypes.STRING(20),
+        field: 'sap_code',
     },
     companyCode: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
+        type: DataTypes.STRING(20),
+        field: 'company_code',
     },
-    type: DataTypes.ENUM(
-        accountTypes.DISTRIBUTOR,
-        accountTypes.DEALER,
-        accountTypes.FRANCHISEE,
-    ),
+    type: {
+        type: DataTypes.ENUM(
+            accountTypes.DISTRIBUTOR,
+            accountTypes.DEALER,
+            accountTypes.FRANCHISEE,
+        ),
+        field: 'type',
+        allowNull: false,
+    },
+    status: {
+        type: DataTypes.STRING(20),
+        allowNull: false,
+        defaultValue: 'active',
+    },
     associateId: {
         type: DataTypes.STRING(26),
+        field: 'associate_id',
         allowNull: true,
         defaultValue: null,
         validate: {
@@ -63,16 +70,24 @@ class Account extends Model {
     declare id: string
     declare type: string
     declare name: string
-    declare address: string
-    declare phone: string
-    declare isrCode: string
-    declare sapCode: string
-    declare companyCode: string
-    declare associateId: string
+    declare address: string | null
+    declare phone: string | null
+    declare isrCode: string | null
+    declare sapCode: string | null
+    declare companyCode: string | null
+    declare status: string
+    declare associateId: string | null
+    declare parent?: Account
+    declare children?: Account[]
 
-    static associate(models: PlainObject) {
+    static associate(models: Json) {
         this.belongsTo(models.Account, {
             as: 'parent',
+            foreignKey: 'associateId',
+        })
+
+        this.hasMany(models.Account, {
+            as: 'children',
             foreignKey: 'associateId',
         })
     }

@@ -9,6 +9,7 @@
     "dependencies": {
         "@inquirer/prompts": "^8.3.0",
         "argon2": "^0.45.1",
+        "csv-parse": "^7.0.2",
         "dotenv": "^17.4.2",
         "lodash": "^4.17.23",
         "pg": "^8.23.0",

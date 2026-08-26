@@ -6,4 +6,4 @@ export default {
     DISTRIBUTOR,
     DEALER,
     FRANCHISEE,
-}
+} as const

@@ -43,11 +43,11 @@ export default async () => {
          * Populate table
          */
 
-        const mock: PlainObject[] = (await import(SOURCE)).default
+        const mock: Json[] = (await import(SOURCE)).default
 
         let users = await Promise.all(
             _.map(mock, async (item) => {
-                let record: PlainObject = _.pick(item, [
+                let record: Json = _.pick(item, [
                     'id',
                     'role',
                     'first_name',
