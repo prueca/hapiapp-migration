@@ -24,6 +24,7 @@ const schema = z.object({
     firstName: z.string().nonempty(),
     middleName: z.string().nonempty(),
     lastName: z.string().nonempty(),
+    phone: z.string().nonempty(),
     username: z.string().nonempty(),
     password: z.string().nonempty(),
     address: z.string().nonempty(),

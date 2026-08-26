@@ -1,4 +1,4 @@
-id,first_name,middle_name,last_name,address,phone_no,role,username,password,account_id,status,created_at,updated_at
+id,first_name,middle_name,last_name,address,phone,role,username,password,account_id,status,created_at,updated_at
 01KZRW48771BV67J8RNDGKP3AK,Elara,James,Smith,"742 Evergreen Terrace, Springfield, IL 62704",+1-555-018-1122,distributor-admin,User1234,6a3d9b79c3c96c4a38195691b180dd1d9bf7ba18f34096a32bb59c2282d20b7c,01KZRRGW1442K27HM42RTFZG1M,active,2026-08-23 16:20:11.752004+08,2026-08-23 16:20:11.752004+08
 01KZRW48777JDTMGDM6JZY87AF,Caspian,Marie,Rodriguez,"123 Maple Avenue, Portland, OR 97201",+1-555-019-3344,distributor-admin,SkyWalker99,6a3d9b79c3c96c4a38195691b180dd1d9bf7ba18f34096a32bb59c2282d20b7c,01KZRRGW1442K27HM42RTFZG1M,active,2026-08-23 16:20:11.752004+08,2026-08-23 16:20:11.752004+08
 01KZRW4877QESJQX4TK48W4NS1,Seraphina,Alexander,Chen,"8502 Oak Lane, Austin, TX 78701",+1-555-017-5566,distributor-user,PixelPioneer,6a3d9b79c3c96c4a38195691b180dd1d9bf7ba18f34096a32bb59c2282d20b7c,01KZRRGW1442K27HM42RTFZG1M,active,2026-08-23 16:20:11.752004+08,2026-08-23 16:20:11.752004+08

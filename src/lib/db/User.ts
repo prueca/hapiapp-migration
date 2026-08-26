@@ -32,6 +32,9 @@ const attributes = {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    phone: {
+        type: DataTypes.STRING(32),
+    },
     username: {
         type: DataTypes.STRING,
         allowNull: false,
