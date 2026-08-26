@@ -26,6 +26,7 @@ const schema = z.object({
     lastName: z.string().nonempty(),
     username: z.string().nonempty(),
     password: z.string().nonempty(),
+    active: z.boolean(),
 })
 
 export default async () => {
@@ -49,10 +50,11 @@ export default async () => {
         users = await Promise.all(
             _.map(users, async (x) => {
                 x = _.mapKeys(x, (v, k) => _.camelCase(k))
-                const { data, error } = schema.safeParse(x)
 
-                if (error) throw error
+                x.active = x.status == 'active'
+                delete x.status
 
+                const data = schema.parse(x)
                 data.password = await argon2.hash(data.password)
 
                 return data

@@ -43,11 +43,6 @@ const attributes = {
         field: 'type',
         allowNull: false,
     },
-    status: {
-        type: DataTypes.STRING(20),
-        allowNull: false,
-        defaultValue: 'active',
-    },
     associateId: {
         type: DataTypes.STRING(26),
         field: 'associate_id',
@@ -56,6 +51,11 @@ const attributes = {
         validate: {
             isValid: ulid.validator(true),
         },
+    },
+    active: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true,
+        allowNull: false,
     },
 }
 
@@ -75,8 +75,8 @@ class Account extends Model {
     declare isrCode: string | null
     declare sapCode: string | null
     declare companyCode: string | null
-    declare status: string
     declare associateId: string | null
+    declare active: boolean
     declare parent?: Account
     declare children?: Account[]
 

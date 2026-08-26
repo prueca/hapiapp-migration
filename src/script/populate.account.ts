@@ -25,8 +25,8 @@ const schema = z
         isrCode: z.string().nonempty(),
         sapCode: z.string().nonempty(),
         companyCode: z.string().nonempty(),
-        status: z.enum(['active', 'inactive']),
         associateId: z.ulid().or(z.null()).or(z.string()),
+        active: z.boolean(),
     })
     .refine((data) => {
         if (data.type === accountTypes.DISTRIBUTOR) {
@@ -56,9 +56,11 @@ export default async () => {
 
         accounts = _.map(accounts, (x) => {
             x = _.mapKeys(x, (v, k) => _.camelCase(k))
-            const { data, error } = schema.safeParse(x)
 
-            if (error) throw error
+            x.active = x.status == 'active'
+            delete x.status
+
+            const data = schema.parse(x)
 
             if (data.type === accountTypes.DISTRIBUTOR) {
                 data.associateId = null
