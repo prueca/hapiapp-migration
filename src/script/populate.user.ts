@@ -31,7 +31,7 @@ const schema = z.object({
 export default async () => {
     const source = path.join(__dirname, '../mock/user.csv')
     const forceSync = true
-    const txn = await sequelize.transaction()
+    const transaction = await sequelize.transaction()
 
     try {
         logger.print('Establishing database connection...')
@@ -59,12 +59,12 @@ export default async () => {
             }),
         )
 
-        await db.User.bulkCreate(users, { transaction: txn })
+        await db.User.bulkCreate(users, { transaction })
         logger.print(`Inserted ${users.length} records.`)
 
-        await txn.commit()
+        await transaction.commit()
     } catch (e: any) {
-        await txn.rollback()
+        await transaction.rollback()
 
         logger.print(e.message)
         logger.print(e.stack)

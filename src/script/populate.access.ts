@@ -2,24 +2,25 @@ import 'dotenv/config'
 import _ from 'lodash'
 import z from 'zod'
 import { Op } from 'sequelize'
+import path from 'path'
 
 import db, { sequelize } from '@/lib/db'
 import Logger from '@/lib/logger'
-
-const FRESH = true
-const SOURCE = '@/mock/users.json'
+import read from '@/lib/source.reader'
 
 const logger = new Logger('populate:access')
 
 export default async () => {
-    const txn = await sequelize.transaction()
+    const source = path.join(__dirname, '../mock/user.csv')
+    const forceSync = true
+    const transaction = await sequelize.transaction()
 
     try {
         logger.print('Establishing database connection...')
         await sequelize.authenticate()
 
         logger.print('Creating table...')
-        await db.Access.sync({ force: FRESH })
+        await db.Access.sync({ force: forceSync })
 
         const schema = z.object({
             userId: z.ulid(),
@@ -30,9 +31,9 @@ export default async () => {
          * Populate table
          */
 
-        const mock: Json[] = (await import(SOURCE)).default
+        const users = await read(source)
 
-        let access = _.map(mock, (item) => {
+        let access = _.map(users, (item) => {
             let record: Json = {
                 userId: item.id,
                 accountId: item.account_id,
@@ -43,7 +44,7 @@ export default async () => {
             return record
         })
 
-        await db.Access.bulkCreate(access, { transaction: txn })
+        await db.Access.bulkCreate(access, { transaction })
         logger.print(`Inserted ${access.length} records.`)
 
         const orphaned = await db.Access.findAll({
@@ -62,16 +63,16 @@ export default async () => {
             where: {
                 [Op.or]: [{ '$user.id$': null }, { '$account.id$': null }],
             },
-            transaction: txn,
+            transaction,
         })
 
         if (orphaned.length) {
             throw new Error(`Found ${orphaned.length} orphaned access`)
         }
 
-        await txn.commit()
+        await transaction.commit()
     } catch (e: any) {
-        await txn.rollback()
+        await transaction.rollback()
 
         logger.print(e.message)
         logger.print(e.stack)
