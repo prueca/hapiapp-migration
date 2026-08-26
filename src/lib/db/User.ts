@@ -41,6 +41,9 @@ const attributes = {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    address: {
+        type: DataTypes.TEXT,
+    },
     active: {
         type: DataTypes.BOOLEAN,
         defaultValue: true,
@@ -63,6 +66,7 @@ class User extends Model {
     declare lastName: string
     declare username: string
     declare password: string
+    declare address: string
     declare active: boolean
 }
 

@@ -26,6 +26,7 @@ const schema = z.object({
     lastName: z.string().nonempty(),
     username: z.string().nonempty(),
     password: z.string().nonempty(),
+    address: z.string().nonempty(),
     active: z.boolean(),
 })
 
