@@ -133,7 +133,7 @@
     },
     {
         "id": "01KZRRGW142RC6MARTSS19R7GK",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Aetheris Systems",
         "address": "101 Stellar Way Orion Belt 44321",
         "phone": "(202) 555-0101",
@@ -144,7 +144,7 @@
     },
     {
         "id": "01KZRRGW14X9Y2N7Y1J43BS87F",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Void Dynamics",
         "address": "55 Lunar Lane Crater City 33901",
         "phone": "(202) 555-0102",
@@ -155,7 +155,7 @@
     },
     {
         "id": "01KZRRGW146F8C4946XJM2S6EC",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Zenith Logistics",
         "address": "99 Comet Trail Galaxy 88710",
         "phone": "(202) 555-0103",
@@ -166,7 +166,7 @@
     },
     {
         "id": "01KZRRGW14XPKB44H9B6WS515H",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Nebula Tech",
         "address": "12 Stellar Way Andromeda 11234",
         "phone": "(202) 555-0104",
@@ -177,7 +177,7 @@
     },
     {
         "id": "01KZRRGW14A7VW9HY70W2ZKDCX",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Astral Reach",
         "address": "77 Supernova St Orion 55432",
         "phone": "(202) 555-0105",
@@ -188,7 +188,7 @@
     },
     {
         "id": "01KZRRGW14WSB3JJJKQDEREKF3",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Galactic Core",
         "address": "20 Meteor Road Mars 99876",
         "phone": "(202) 555-0106",
@@ -199,7 +199,7 @@
     },
     {
         "id": "01KZRRGW147SW8PDR6Z12DT4B9",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Pulse Dynamics",
         "address": "15 Orbit Way Galaxy 44556",
         "phone": "(202) 555-0107",
@@ -210,7 +210,7 @@
     },
     {
         "id": "01KZRRGW14W9JF1K1J0X6X34N8",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Nova Stream",
         "address": "33 Gravity Way Orion 66778",
         "phone": "(202) 555-0108",
@@ -221,7 +221,7 @@
     },
     {
         "id": "01KZRRGW14SVP3PKMRRXC2J621",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Titanium Way",
         "address": "88 Nebula Rd Andromeda 22334",
         "phone": "(202) 555-0109",
@@ -232,7 +232,7 @@
     },
     {
         "id": "01KZRRGW14X04WHWJ78QR6J8H3",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Core Systems",
         "address": "21 Star Way Orion 99001",
         "phone": "(202) 555-0110",
@@ -243,7 +243,7 @@
     },
     {
         "id": "01KZRRGW14THZB9B34PPHZSFE2",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "EtherFlow",
         "address": "12 Celestial Way Galaxy 11223",
         "phone": "(202) 555-0111",
@@ -254,7 +254,7 @@
     },
     {
         "id": "01KZRRGW140MQ9ZE887EQDG87Z",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Orbit Flow",
         "address": "44 Nova Way Andromeda 33445",
         "phone": "(202) 555-0112",
@@ -265,7 +265,7 @@
     },
     {
         "id": "01KZRRGW14VWS3587600FPGYJJ",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Zenith Star",
         "address": "34 Meteor Way Mars 55667",
         "phone": "(202) 555-0113",
@@ -276,7 +276,7 @@
     },
     {
         "id": "01KZRRGW14Y65J9N71RS7C99PT",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Pulse Star",
         "address": "22 Orbit Way Orion 77889",
         "phone": "(202) 555-0114",
@@ -287,7 +287,7 @@
     },
     {
         "id": "01KZRRGW14N9EVMX0Z1ZRJRRAH",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Nova Reach",
         "address": "11 Cosmic Way Galaxy 99001",
         "phone": "(202) 555-0115",
@@ -298,7 +298,7 @@
     },
     {
         "id": "01KZRRGW14WH1V6PTWDSASC4XK",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Sync Flow",
         "address": "56 Gravity Way Mars 12345",
         "phone": "(202) 555-0116",
@@ -309,7 +309,7 @@
     },
     {
         "id": "01KZRRGW14EVYGVAR1F5M4N714",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Prime Way",
         "address": "33 Nebula Rd Andromeda 23456",
         "phone": "(202) 555-0117",
@@ -320,7 +320,7 @@
     },
     {
         "id": "01KZRRGW14200T0G4QVVJEZMW1",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Apex Flow",
         "address": "99 Supernova St Orion 34567",
         "phone": "(202) 555-0118",
@@ -331,7 +331,7 @@
     },
     {
         "id": "01KZRRGW14PHE1YJB3BS55XR3K",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Luna Reach",
         "address": "14 Stellar Way Galaxy 45678",
         "phone": "(202) 555-0119",
@@ -342,7 +342,7 @@
     },
     {
         "id": "01KZRRGW14JQ7JEW5HBDS8P7VJ",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Nova Core",
         "address": "22 Orbit Way Mars 56789",
         "phone": "(202) 555-0120",
@@ -353,7 +353,7 @@
     },
     {
         "id": "01KZRRGW14FX4FRK4R4E3MKR5J",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Orbit Reach",
         "address": "33 Gravity Way Andromeda 67890",
         "phone": "(202) 555-0121",
@@ -364,7 +364,7 @@
     },
     {
         "id": "01KZRRGW14KVWBG89MRPJPJBXC",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Nova Way",
         "address": "45 Meteor Rd Orion 78901",
         "phone": "(202) 555-0122",
@@ -375,7 +375,7 @@
     },
     {
         "id": "01KZRRGW143XAZME28X8CPEY8S",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Pulse Core",
         "address": "56 Nova Way Galaxy 89012",
         "phone": "(202) 555-0123",
@@ -386,7 +386,7 @@
     },
     {
         "id": "01KZRRGW14RBSVD8GEY7WA5YWC",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Zenith Way",
         "address": "67 Supernova St Mars 90123",
         "phone": "(202) 555-0124",
@@ -397,7 +397,7 @@
     },
     {
         "id": "01KZRRGW1448AZYH3Y9E70DS21",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Flow Reach",
         "address": "78 Orbit Way Andromeda 01234",
         "phone": "(202) 555-0125",
@@ -408,7 +408,7 @@
     },
     {
         "id": "01KZRRGW14G35YB41SN7AN85CV",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Orbit Flow",
         "address": "89 Gravity Way Orion 12345",
         "phone": "(202) 555-0126",
@@ -419,7 +419,7 @@
     },
     {
         "id": "01KZRRGW142XAJ3EN2YJAF1HJB",
-        "type": "franchisee",
+        "type": "hapistore",
         "name": "Nova Star",
         "address": "90 Nebula Rd Galaxy 23456",
         "phone": "(202) 555-0127",

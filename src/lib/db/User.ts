@@ -17,8 +17,8 @@ const attributes = {
         userRoles.DISTRIBUTOR_USER,
         userRoles.DEALER_ADMIN,
         userRoles.DEALER_USER,
-        userRoles.FRANCHISEE_ADMIN,
-        userRoles.FRANCHISEE_USER,
+        userRoles.HAPISTORE_ADMIN,
+        userRoles.HAPISTORE_USER,
     ),
     firstName: {
         type: DataTypes.STRING,

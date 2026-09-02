@@ -17,7 +17,7 @@ const schema = z
         type: z.enum([
             accountTypes.DISTRIBUTOR,
             accountTypes.DEALER,
-            accountTypes.FRANCHISEE,
+            accountTypes.HAPISTORE,
         ]),
         name: z.string().nonempty(),
         address: z.string().nonempty(),

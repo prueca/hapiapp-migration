@@ -186,7 +186,7 @@
     "last_name": "Blick",
     "address": "40986 Goldner Passage, East Ashaton, Maryland",
     "phone_no": "302.927.9064 x54224",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "savanah-blick",
     "password": "hapi123",
     "account_id": "01KZRRGW14KMGR1H2QPNVXB420"
@@ -198,7 +198,7 @@
     "last_name": "Reinger",
     "address": "2011 Mellie Dam, Flaviochester, Delaware",
     "phone_no": "352.815.4155 x45988",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "kira-reinger",
     "password": "hapi123",
     "account_id": "01KZRRGW14KMGR1H2QPNVXB420"
@@ -210,7 +210,7 @@
     "last_name": "Kessler",
     "address": "18944 Low Road, Lake Jett, Ohio",
     "phone_no": "(284) 770-2508 x03236",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "whitney-kessler",
     "password": "hapi123",
     "account_id": "01KZRRGW14KMGR1H2QPNVXB420"
@@ -222,7 +222,7 @@
     "last_name": "Tromp",
     "address": "85795 Margret Port, Gresham, Ohio",
     "phone_no": "870.469.4626 x797",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "bernadette-tromp",
     "password": "hapi123",
     "account_id": "01KZRRGW14KMGR1H2QPNVXB420"
@@ -234,7 +234,7 @@
     "last_name": "Schuster",
     "address": "80718 Bode Island, Elmhurst, Tennessee",
     "phone_no": "410.369.8644",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "ewell-schuster",
     "password": "hapi123",
     "account_id": "01KZRRGW14KMGR1H2QPNVXB420"
@@ -246,7 +246,7 @@
     "last_name": "Cruickshank-Cremin",
     "address": "6288 Central Avenue, Port Emmanuelbury, New Hampshire",
     "phone_no": "1-886-239-0767 x8322",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "douglas-cruickshank-cremin",
     "password": "hapi123",
     "account_id": "01KZRRGW143DR9TSRKKQDPRDKM"
@@ -258,7 +258,7 @@
     "last_name": "Koss",
     "address": "589 Maggio Trafficway, Riceworth, Alabama",
     "phone_no": "(873) 897-4423 x2438",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "spencer-koss",
     "password": "hapi123",
     "account_id": "01KZRRGW143DR9TSRKKQDPRDKM"
@@ -270,7 +270,7 @@
     "last_name": "Schmitt",
     "address": "881 Broderick Mall, Kadeboro, Kansas",
     "phone_no": "(631) 939-6096",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "green-schmitt",
     "password": "hapi123",
     "account_id": "01KZRRGW143DR9TSRKKQDPRDKM"
@@ -282,7 +282,7 @@
     "last_name": "Stracke",
     "address": "32345 Kirstin Way, Rocklin, Michigan",
     "phone_no": "1-594-920-8284 x29169",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "bud-stracke",
     "password": "hapi123",
     "account_id": "01KZRRGW143DR9TSRKKQDPRDKM"
@@ -294,7 +294,7 @@
     "last_name": "Roob",
     "address": "815 Roberts Dale, West Tomasa, Maryland",
     "phone_no": "1-565-996-7145 x2697",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "alessandro-roob",
     "password": "hapi123",
     "account_id": "01KZRRGW143DR9TSRKKQDPRDKM"
@@ -306,7 +306,7 @@
     "last_name": "Gislason",
     "address": "138 The Limes, Sylvanstad, Ohio",
     "phone_no": "577.660.7627 x6714",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "aglae-gislason",
     "password": "hapi123",
     "account_id": "01KZRRGW14MXEWF9HMYNXVS5ER"
@@ -318,7 +318,7 @@
     "last_name": "Christiansen",
     "address": "2180 Streich Parks, South Pascale, Virginia",
     "phone_no": "1-986-984-1832 x657",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "gertrude-christiansen",
     "password": "hapi123",
     "account_id": "01KZRRGW14MXEWF9HMYNXVS5ER"
@@ -330,7 +330,7 @@
     "last_name": "Stokes-Kozey",
     "address": "4690 Brooke Mall, Perth Amboy, New Mexico",
     "phone_no": "(946) 252-3816",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "oran-stokes-kozey",
     "password": "hapi123",
     "account_id": "01KZRRGW14MXEWF9HMYNXVS5ER"
@@ -342,7 +342,7 @@
     "last_name": "Schoen",
     "address": "288 Hector Hills, Castle Rock, New Jersey",
     "phone_no": "328.566.8611 x4030",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "meagan-schoen",
     "password": "hapi123",
     "account_id": "01KZRRGW14MXEWF9HMYNXVS5ER"
@@ -354,7 +354,7 @@
     "last_name": "Anderson",
     "address": "11027 Don Crest, Opalshire, South Carolina",
     "phone_no": "(578) 460-4500",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "doris-anderson",
     "password": "hapi123",
     "account_id": "01KZRRGW14MXEWF9HMYNXVS5ER"
@@ -366,7 +366,7 @@
     "last_name": "Kovacek",
     "address": "7790 Frederik Mill, West Zoeycester, Tennessee",
     "phone_no": "(403) 735-2551 x463",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "joel-kovacek",
     "password": "hapi123",
     "account_id": "01KZRRGW14DC1V4DFEXXX74JBW"
@@ -378,7 +378,7 @@
     "last_name": "Grant",
     "address": "43006 Cyrus Unions, New Brunswick, Idaho",
     "phone_no": "936.357.9276 x95793",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "pedro-grant",
     "password": "hapi123",
     "account_id": "01KZRRGW14DC1V4DFEXXX74JBW"
@@ -390,7 +390,7 @@
     "last_name": "Osinski",
     "address": "9646 Roman Road, Des Plaines, Mississippi",
     "phone_no": "246.280.7846 x76442",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "jamaal-osinski",
     "password": "hapi123",
     "account_id": "01KZRRGW14DC1V4DFEXXX74JBW"
@@ -402,7 +402,7 @@
     "last_name": "Nolan",
     "address": "28471 Blind Lane, Alethaworth, Ohio",
     "phone_no": "1-251-763-4670 x6165",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "cecile-nolan",
     "password": "hapi123",
     "account_id": "01KZRRGW14DC1V4DFEXXX74JBW"
@@ -414,7 +414,7 @@
     "last_name": "Armstrong",
     "address": "849 Hawthorn Avenue, Ortizmouth, Wyoming",
     "phone_no": "1-387-336-6972",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "malachi-armstrong",
     "password": "hapi123",
     "account_id": "01KZRRGW14DC1V4DFEXXX74JBW"
@@ -426,7 +426,7 @@
     "last_name": "Lehner",
     "address": "777 Daniela Crossing, South Damionworth, Vermont",
     "phone_no": "591.466.8637 x296",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "pietro-lehner",
     "password": "hapi123",
     "account_id": "01KZRRGW14KBMMYGKVHMX9RQD8"
@@ -438,7 +438,7 @@
     "last_name": "Bernhard",
     "address": "9607 Houston Unions, Utica, Connecticut",
     "phone_no": "1-790-204-9006",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "lowell-bernhard",
     "password": "hapi123",
     "account_id": "01KZRRGW14KBMMYGKVHMX9RQD8"
@@ -450,7 +450,7 @@
     "last_name": "Schuppe",
     "address": "140 Johnston Corners, Ilastad, Oklahoma",
     "phone_no": "(307) 418-6933 x26775",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "beulah-schuppe",
     "password": "hapi123",
     "account_id": "01KZRRGW14KBMMYGKVHMX9RQD8"
@@ -462,7 +462,7 @@
     "last_name": "Ruecker",
     "address": "64556 Korey Club, Port Jeramy, Kansas",
     "phone_no": "(474) 290-9086 x86469",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "arnulfo-ruecker",
     "password": "hapi123",
     "account_id": "01KZRRGW14KBMMYGKVHMX9RQD8"
@@ -474,7 +474,7 @@
     "last_name": "Wilkinson",
     "address": "907 Veum Park, Johnsonport, Connecticut",
     "phone_no": "1-212-562-2738 x818",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "treva-wilkinson",
     "password": "hapi123",
     "account_id": "01KZRRGW14KBMMYGKVHMX9RQD8"
@@ -486,7 +486,7 @@
     "last_name": "Watsica",
     "address": "93708 Deborah Villages, Arvada, Arizona",
     "phone_no": "1-428-840-1783 x2577",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "lydia-watsica",
     "password": "hapi123",
     "account_id": "01KZRRGW149RPSGBHQY8MZC6NF"
@@ -498,7 +498,7 @@
     "last_name": "Lueilwitz",
     "address": "9405 Arvel Skyway, Danykahaven, Ohio",
     "phone_no": "233.915.1496 x945",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "raheem-lueilwitz",
     "password": "hapi123",
     "account_id": "01KZRRGW149RPSGBHQY8MZC6NF"
@@ -510,7 +510,7 @@
     "last_name": "Nolan",
     "address": "588 Central Street, Port Keagan, Nebraska",
     "phone_no": "310-874-1210 x10293",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "tremaine-nolan",
     "password": "hapi123",
     "account_id": "01KZRRGW149RPSGBHQY8MZC6NF"
@@ -522,7 +522,7 @@
     "last_name": "Davis",
     "address": "31837 Schaefer Flats, Elk Grove, Washington",
     "phone_no": "1-572-968-4833",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "eliezer-davis",
     "password": "hapi123",
     "account_id": "01KZRRGW149RPSGBHQY8MZC6NF"
@@ -534,7 +534,7 @@
     "last_name": "O&#x27;Reilly",
     "address": "46372 Wolf Key, Arianefort, Oregon",
     "phone_no": "737.635.1576 x554",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "giles-o&#x27;reilly",
     "password": "hapi123",
     "account_id": "01KZRRGW149RPSGBHQY8MZC6NF"
@@ -546,7 +546,7 @@
     "last_name": "Ruecker",
     "address": "193 Green Fall, South Izabellaview, Utah",
     "phone_no": "541.960.4967",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "raoul-ruecker",
     "password": "hapi123",
     "account_id": "01KZRRGW14K9GDB2KGW0SVFJBM"
@@ -558,7 +558,7 @@
     "last_name": "Mertz",
     "address": "822 S 14th Street, Maribelborough, New Jersey",
     "phone_no": "1-306-791-4755 x338",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "helene-mertz",
     "password": "hapi123",
     "account_id": "01KZRRGW14K9GDB2KGW0SVFJBM"
@@ -570,7 +570,7 @@
     "last_name": "Howell",
     "address": "17734 Kovacek Skyway, Fort Maurineview, Utah",
     "phone_no": "(668) 379-6117 x46616",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "vance-howell",
     "password": "hapi123",
     "account_id": "01KZRRGW14K9GDB2KGW0SVFJBM"
@@ -582,7 +582,7 @@
     "last_name": "Haag",
     "address": "14441 Ash Street, West Landenboro, Wisconsin",
     "phone_no": "474-354-2934 x6771",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "laurence-haag",
     "password": "hapi123",
     "account_id": "01KZRRGW14K9GDB2KGW0SVFJBM"
@@ -594,7 +594,7 @@
     "last_name": "Ondricka",
     "address": "7291 S Chestnut Street, Hermistonland, Utah",
     "phone_no": "(631) 860-5108 x154",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "edna-ondricka",
     "password": "hapi123",
     "account_id": "01KZRRGW14K9GDB2KGW0SVFJBM"
@@ -606,7 +606,7 @@
     "last_name": "Lehner",
     "address": "521 College Avenue, North Itzelland, Kentucky",
     "phone_no": "1-982-935-4587 x84653",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "lura-lehner",
     "password": "hapi123",
     "account_id": "01KZRRGW14J5MRZ241JHXYMPE5"
@@ -618,7 +618,7 @@
     "last_name": "Raynor",
     "address": "50868 Jefferson Avenue, Lake Kiley, Iowa",
     "phone_no": "1-306-725-6856 x16083",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "orrin-raynor",
     "password": "hapi123",
     "account_id": "01KZRRGW14J5MRZ241JHXYMPE5"
@@ -630,7 +630,7 @@
     "last_name": "Kilback",
     "address": "1782 School Lane, Jettstead, North Dakota",
     "phone_no": "1-454-738-7283 x6587",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "cathryn-kilback",
     "password": "hapi123",
     "account_id": "01KZRRGW14J5MRZ241JHXYMPE5"
@@ -642,7 +642,7 @@
     "last_name": "Wilderman-Thompson",
     "address": "9761 Pagac Greens, North Naomie, Florida",
     "phone_no": "787-282-5556 x25140",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "markus-wilderman-thompson",
     "password": "hapi123",
     "account_id": "01KZRRGW14J5MRZ241JHXYMPE5"
@@ -654,7 +654,7 @@
     "last_name": "Rogahn",
     "address": "5433 Grange Road, Lewmouth, Texas",
     "phone_no": "857-341-6367 x261",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "gertrude-rogahn",
     "password": "hapi123",
     "account_id": "01KZRRGW14J5MRZ241JHXYMPE5"
@@ -666,7 +666,7 @@
     "last_name": "Lueilwitz",
     "address": "5816 Oak Street, Jamiechester, Wisconsin",
     "phone_no": "771.498.9409 x11945",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "melyna-lueilwitz",
     "password": "hapi123",
     "account_id": "01KZRRGW14Z2V2BPKDSQ6DKV67"
@@ -678,7 +678,7 @@
     "last_name": "Heidenreich",
     "address": "5273 S Park Street, Feilbury, Idaho",
     "phone_no": "1-561-350-8015 x37078",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "sister-heidenreich",
     "password": "hapi123",
     "account_id": "01KZRRGW14Z2V2BPKDSQ6DKV67"
@@ -690,7 +690,7 @@
     "last_name": "Denesik",
     "address": "88105 Nayeli Hollow, Kurtisstead, Alaska",
     "phone_no": "1-685-674-5920 x68963",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "emery-denesik",
     "password": "hapi123",
     "account_id": "01KZRRGW14Z2V2BPKDSQ6DKV67"
@@ -702,7 +702,7 @@
     "last_name": "Douglas",
     "address": "301 9th Street, East Bernadette, Missouri",
     "phone_no": "(812) 434-2821",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "cortez-douglas",
     "password": "hapi123",
     "account_id": "01KZRRGW14Z2V2BPKDSQ6DKV67"
@@ -714,7 +714,7 @@
     "last_name": "Prohaska",
     "address": "937 Myrtice Summit, Lake Matilde, New York",
     "phone_no": "(851) 983-4484",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "ryan-prohaska",
     "password": "hapi123",
     "account_id": "01KZRRGW14Z2V2BPKDSQ6DKV67"
@@ -726,7 +726,7 @@
     "last_name": "Kassulke",
     "address": "135 Glover Roads, Jadenboro, Idaho",
     "phone_no": "(723) 548-3828",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "wava-kassulke",
     "password": "hapi123",
     "account_id": "01KZRRGW142RC6MARTSS19R7GK"
@@ -738,7 +738,7 @@
     "last_name": "Witting",
     "address": "156 O&#x27;Keefe Branch, New Kane, Iowa",
     "phone_no": "686-420-9705 x697",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "wilford-witting",
     "password": "hapi123",
     "account_id": "01KZRRGW142RC6MARTSS19R7GK"
@@ -750,7 +750,7 @@
     "last_name": "MacGyver",
     "address": "87319 Milton Road, South Guadalupe, North Dakota",
     "phone_no": "(962) 861-7767 x643",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "ned-macgyver",
     "password": "hapi123",
     "account_id": "01KZRRGW142RC6MARTSS19R7GK"
@@ -762,7 +762,7 @@
     "last_name": "Harris",
     "address": "415 Deshaun Mount, Perth Amboy, New Hampshire",
     "phone_no": "(276) 524-4352 x837",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "rodolfo-harris",
     "password": "hapi123",
     "account_id": "01KZRRGW142RC6MARTSS19R7GK"
@@ -774,7 +774,7 @@
     "last_name": "Ziemann",
     "address": "106 Leatha Field, Fort Merlestad, South Dakota",
     "phone_no": "418-857-3834 x598",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "kaleigh-ziemann",
     "password": "hapi123",
     "account_id": "01KZRRGW142RC6MARTSS19R7GK"
@@ -786,7 +786,7 @@
     "last_name": "Rosenbaum",
     "address": "10338 Harris Centers, South Loyal, West Virginia",
     "phone_no": "369.283.8066 x726",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "nestor-rosenbaum",
     "password": "hapi123",
     "account_id": "01KZRRGW14X9Y2N7Y1J43BS87F"
@@ -798,7 +798,7 @@
     "last_name": "Stroman",
     "address": "8297 Crooks Motorway, West Dominic, Illinois",
     "phone_no": "443.462.8894",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "leonie-stroman",
     "password": "hapi123",
     "account_id": "01KZRRGW14X9Y2N7Y1J43BS87F"
@@ -810,7 +810,7 @@
     "last_name": "Cartwright",
     "address": "159 N Cedar Street, Summerville, Georgia",
     "phone_no": "1-624-399-9493 x64715",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "makayla-cartwright",
     "password": "hapi123",
     "account_id": "01KZRRGW14X9Y2N7Y1J43BS87F"
@@ -822,7 +822,7 @@
     "last_name": "Mills",
     "address": "6611 Wiegand Points, Fort Nikkicester, Alaska",
     "phone_no": "(822) 544-2916 x604",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "marta-mills",
     "password": "hapi123",
     "account_id": "01KZRRGW14X9Y2N7Y1J43BS87F"
@@ -834,7 +834,7 @@
     "last_name": "White",
     "address": "1078 3rd Avenue, Toyfurt, Massachusetts",
     "phone_no": "(382) 691-5500 x52788",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "julie-white",
     "password": "hapi123",
     "account_id": "01KZRRGW14X9Y2N7Y1J43BS87F"
@@ -846,7 +846,7 @@
     "last_name": "Hettinger",
     "address": "531 Rodrigo Estate, Pfannerstillboro, New Hampshire",
     "phone_no": "717-784-3427",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "demetris-hettinger",
     "password": "hapi123",
     "account_id": "01KZRRGW146F8C4946XJM2S6EC"
@@ -858,7 +858,7 @@
     "last_name": "Lakin",
     "address": "28713 N Walnut Street, Ryanfield, Illinois",
     "phone_no": "(942) 213-2230",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "effie-lakin",
     "password": "hapi123",
     "account_id": "01KZRRGW146F8C4946XJM2S6EC"
@@ -870,7 +870,7 @@
     "last_name": "Marks",
     "address": "280 Station Road, West Agustina, Georgia",
     "phone_no": "(584) 792-6472 x0210",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "laura-marks",
     "password": "hapi123",
     "account_id": "01KZRRGW146F8C4946XJM2S6EC"
@@ -882,7 +882,7 @@
     "last_name": "Schumm",
     "address": "4350 Bernice Avenue, Zanefield, Wisconsin",
     "phone_no": "(838) 628-9400",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "jarrett-schumm",
     "password": "hapi123",
     "account_id": "01KZRRGW146F8C4946XJM2S6EC"
@@ -894,7 +894,7 @@
     "last_name": "Tromp",
     "address": "7765 Kingfisher Close, Hansenfort, Florida",
     "phone_no": "400-650-2323 x49001",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "matilda-tromp",
     "password": "hapi123",
     "account_id": "01KZRRGW146F8C4946XJM2S6EC"
@@ -906,7 +906,7 @@
     "last_name": "Reinger-Waelchi",
     "address": "8807 Betty Cliffs, Fort Jimmie, Washington",
     "phone_no": "1-592-300-7726",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "matteo-reinger-waelchi",
     "password": "hapi123",
     "account_id": "01KZRRGW14XPKB44H9B6WS515H"
@@ -918,7 +918,7 @@
     "last_name": "Bailey",
     "address": "791 Sauer Bypass, Lake Havasu City, Hawaii",
     "phone_no": "(736) 621-9786 x855",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "sunny-bailey",
     "password": "hapi123",
     "account_id": "01KZRRGW14XPKB44H9B6WS515H"
@@ -930,7 +930,7 @@
     "last_name": "Schimmel",
     "address": "867 Brekke Glens, Hellermouth, Massachusetts",
     "phone_no": "1-351-582-4034 x6897",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "julia-schimmel",
     "password": "hapi123",
     "account_id": "01KZRRGW14XPKB44H9B6WS515H"
@@ -942,7 +942,7 @@
     "last_name": "Hahn",
     "address": "2417 W Broadway Avenue, Covina, Wyoming",
     "phone_no": "1-876-268-7538",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "velda-hahn",
     "password": "hapi123",
     "account_id": "01KZRRGW14XPKB44H9B6WS515H"
@@ -954,7 +954,7 @@
     "last_name": "Jones",
     "address": "275 Main Street E, Derrickshire, New Mexico",
     "phone_no": "(730) 843-5538 x56846",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "jamarcus-jones",
     "password": "hapi123",
     "account_id": "01KZRRGW14XPKB44H9B6WS515H"
@@ -966,7 +966,7 @@
     "last_name": "Morissette",
     "address": "139 Irving Ridge, Marianamouth, California",
     "phone_no": "946.581.6298 x41916",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "chester-morissette",
     "password": "hapi123",
     "account_id": "01KZRRGW14A7VW9HY70W2ZKDCX"
@@ -978,7 +978,7 @@
     "last_name": "Schmeler",
     "address": "39330 S 3rd Street, Hahnborough, Utah",
     "phone_no": "865-549-3748 x623",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "fae-schmeler",
     "password": "hapi123",
     "account_id": "01KZRRGW14A7VW9HY70W2ZKDCX"
@@ -990,7 +990,7 @@
     "last_name": "Hyatt",
     "address": "3339 Orrin Terrace, Maeganland, Illinois",
     "phone_no": "1-431-451-0281 x96634",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "alphonso-hyatt",
     "password": "hapi123",
     "account_id": "01KZRRGW14A7VW9HY70W2ZKDCX"
@@ -1002,7 +1002,7 @@
     "last_name": "Dicki",
     "address": "1734 Darius Greens, Lakeville, Idaho",
     "phone_no": "1-662-702-9468 x913",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "sterling-dicki",
     "password": "hapi123",
     "account_id": "01KZRRGW14A7VW9HY70W2ZKDCX"
@@ -1014,7 +1014,7 @@
     "last_name": "Keebler",
     "address": "63185 N Washington Street, Breitenbergberg, Minnesota",
     "phone_no": "(650) 334-5100 x5841",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "eloisa-keebler",
     "password": "hapi123",
     "account_id": "01KZRRGW14A7VW9HY70W2ZKDCX"
@@ -1026,7 +1026,7 @@
     "last_name": "Robel",
     "address": "35038 Commercial Street, Lake Herminio, Georgia",
     "phone_no": "1-437-629-0881",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "clemmie-robel",
     "password": "hapi123",
     "account_id": "01KZRRGW14WSB3JJJKQDEREKF3"
@@ -1038,7 +1038,7 @@
     "last_name": "Schmitt",
     "address": "28095 Reichert Ways, South Itzelport, Washington",
     "phone_no": "699.432.1895 x900",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "guido-schmitt",
     "password": "hapi123",
     "account_id": "01KZRRGW14WSB3JJJKQDEREKF3"
@@ -1050,7 +1050,7 @@
     "last_name": "Hodkiewicz",
     "address": "38278 Hill Road, Fort Concepcion, Maine",
     "phone_no": "1-660-341-6654",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "patrick-hodkiewicz",
     "password": "hapi123",
     "account_id": "01KZRRGW14WSB3JJJKQDEREKF3"
@@ -1062,7 +1062,7 @@
     "last_name": "Rau",
     "address": "682 Aryanna Roads, Fort Palma, Florida",
     "phone_no": "(923) 948-9776 x811",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "alfred-rau",
     "password": "hapi123",
     "account_id": "01KZRRGW14WSB3JJJKQDEREKF3"
@@ -1074,7 +1074,7 @@
     "last_name": "Cremin",
     "address": "722 Dare Estate, Port Dudley, South Carolina",
     "phone_no": "689.802.8090 x04949",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "donna-cremin",
     "password": "hapi123",
     "account_id": "01KZRRGW14WSB3JJJKQDEREKF3"
@@ -1086,7 +1086,7 @@
     "last_name": "Bauch",
     "address": "906 Candice Hollow, New Leann, South Dakota",
     "phone_no": "630.901.7318 x3307",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "camron-bauch",
     "password": "hapi123",
     "account_id": "01KZRRGW147SW8PDR6Z12DT4B9"
@@ -1098,7 +1098,7 @@
     "last_name": "Christiansen",
     "address": "41101 King Greens, Michaelville, Alaska",
     "phone_no": "(278) 638-2557 x7442",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "lenore-christiansen",
     "password": "hapi123",
     "account_id": "01KZRRGW147SW8PDR6Z12DT4B9"
@@ -1110,7 +1110,7 @@
     "last_name": "Renner",
     "address": "573 Stoltenberg Port, Meaghantown, Iowa",
     "phone_no": "1-875-788-4108 x17859",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "jany-renner",
     "password": "hapi123",
     "account_id": "01KZRRGW147SW8PDR6Z12DT4B9"
@@ -1122,7 +1122,7 @@
     "last_name": "Miller",
     "address": "2533 Schumm Orchard, Arcadia, Delaware",
     "phone_no": "1-436-855-5747",
-    "role": "franchisee-admin",
+    "role": "hapistore-admin",
     "username": "jeffrey-miller",
     "password": "hapi123",
     "account_id": "01KZRRGW147SW8PDR6Z12DT4B9"
@@ -1134,7 +1134,7 @@
     "last_name": "Ankunding",
     "address": "62088 Oxford Street, Chapel Hill, Michigan",
     "phone_no": "571-829-9186 x477",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "caden-ankunding",
     "password": "hapi123",
     "account_id": "01KZRRGW147SW8PDR6Z12DT4B9"
@@ -1146,7 +1146,7 @@
     "last_name": "Fay-Osinski",
     "address": "3224 Cielo Motorway, Gilbertville, South Dakota",
     "phone_no": "(438) 564-8887 x25053",
-    "role": "franchisee-user",
+    "role": "hapistore-user",
     "username": "norberto-fay-osinski",
     "password": "hapi123",
     "account_id": "01KZRRGW14W9JF1K1J0X6X34N8"

@@ -1,9 +1,9 @@
 const DISTRIBUTOR = 'distributor'
 const DEALER = 'dealer'
-const FRANCHISEE = 'franchisee'
+const HAPISTORE = 'hapistore'
 
 export default {
     DISTRIBUTOR,
     DEALER,
-    FRANCHISEE,
+    HAPISTORE,
 } as const

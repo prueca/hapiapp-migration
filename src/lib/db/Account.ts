@@ -38,7 +38,7 @@ const attributes = {
         type: DataTypes.ENUM(
             accountTypes.DISTRIBUTOR,
             accountTypes.DEALER,
-            accountTypes.FRANCHISEE,
+            accountTypes.HAPISTORE,
         ),
         field: 'type',
         allowNull: false,
