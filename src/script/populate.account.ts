@@ -1,13 +1,18 @@
 import _ from 'lodash'
 import z from 'zod'
-import { Op } from 'sequelize'
-import path from 'node:path'
+import path from 'path'
 
-import db, { sequelize } from '@/lib/db'
 import ulid from '@/lib/ulid'
 import accountTypes from '@/lib/account.types'
 import Logger from '@/lib/logger'
 import read from '@/lib/source.reader'
+
+import db from '@/lib/db'
+import { eq, and, or } from 'drizzle-orm'
+import { alias } from 'drizzle-orm/pg-core'
+import * as t from '@/lib/db/schema'
+
+type Account = typeof t.account.$inferSelect
 
 const logger = new Logger('populate:account')
 
@@ -25,76 +30,71 @@ const schema = z
         isrCode: z.string().nonempty(),
         sapCode: z.string().nonempty(),
         companyCode: z.string().nonempty(),
-        associateId: z.ulid().or(z.null()).or(z.string()),
+        parentId: z.ulid().or(z.null()).or(z.string()),
         active: z.boolean(),
     })
     .refine((data) => {
         if (data.type === accountTypes.DISTRIBUTOR) {
-            return data.associateId === null || data.associateId === ''
+            return data.parentId === null || data.parentId === ''
         }
 
-        return data.associateId !== null && ulid.isValid(data.associateId)
+        return data.parentId !== null && ulid.isValid(data.parentId)
     })
 
 export default async () => {
     const source = path.join(__dirname, '../mock/account.csv')
-    const forceSync = true
-    const transaction = await sequelize.transaction()
 
     try {
-        logger.print('Establishing database connection...')
-        await sequelize.authenticate()
+        let records: Json[] = await read(source)
 
-        logger.print('Creating table...')
-        await db.Account.sync({ force: forceSync })
-
-        /**
-         * Populate table
-         */
-
-        let accounts: Json[] = await read(source)
-
-        accounts = _.map(accounts, (x) => {
+        records = _.map(records, (x) => {
             x = _.mapKeys(x, (v, k) => _.camelCase(k))
 
-            x.active = x.status == 'active'
+            x.active = x.status === 'active'
             delete x.status
 
             const data = schema.parse(x)
 
             if (data.type === accountTypes.DISTRIBUTOR) {
-                data.associateId = null
+                data.parentId = null
             }
 
             return data
         })
 
-        accounts = await db.Account.bulkCreate(accounts, { transaction })
+        // Mock data already has Ids, so we need to infer
+        // the type of the records to match the database schema
 
-        logger.print(`Inserted ${accounts.length} records.`)
+        await db.transaction(async (txn) => {
+            logger.print('Populating account table...')
+            await txn.insert(t.account).values(records as Account[])
 
-        /**
-         * Ensure parent record exists
-         */
+            // Check for any record that has parentId but
+            // the parent record does not exist
 
-        const orphaned = await db.Account.findAll({
-            include: 'parent',
-            where: {
-                associateId: { [Op.ne]: null },
-                '$parent.id$': null,
-            },
-            transaction,
-            raw: true,
+            const parent = alias(t.account, 'parent')
+
+            const orphans = await txn
+                .select({ parent })
+                .from(t.account)
+                .leftJoin(parent, eq(t.account.parentId, parent.id))
+                .where(
+                    and(
+                        eq(parent, null),
+                        or(
+                            eq(t.account.type, accountTypes.DEALER),
+                            eq(t.account.type, accountTypes.HAPISTORE),
+                        ),
+                    ),
+                )
+
+            if (orphans.length) {
+                throw new Error(`Found ${orphans.length} orphaned accounts`)
+            }
         })
 
-        if (orphaned.length) {
-            throw new Error(`Found ${orphaned.length} orphaned accounts`)
-        }
-
-        await transaction.commit()
+        logger.print(`Inserted ${records.length} records`)
     } catch (e: any) {
-        await transaction.rollback()
-
         logger.print(e.message)
         logger.print(e.stack)
     }

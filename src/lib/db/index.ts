@@ -1,29 +1,12 @@
-import _ from 'lodash'
-import User from './User'
-import sequelize from './sequelize'
-import Account from './Account'
-import Access from './Access'
+import 'dotenv/config'
+import { Pool } from 'pg'
+import { drizzle } from 'drizzle-orm/node-postgres'
 
-const models = {
-    Account,
-    User,
-    Access,
-}
-
-type ModelWithAssociate = {
-    associate?: (arg: typeof models) => void
-}
-
-_.values(models).map((model) => {
-    let assoc = (model as typeof model & ModelWithAssociate).associate
-
-    if (typeof assoc !== 'function') {
-        return
+const pool = new Pool({
+    connectionString: process.env.DB_URL,
+    ssl: {
+        rejectUnauthorized: false
     }
-
-    assoc = assoc.bind(model)
-    assoc(models)
 })
 
-export { sequelize }
-export default models
+export default drizzle(pool)
