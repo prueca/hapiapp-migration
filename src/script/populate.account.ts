@@ -8,7 +8,7 @@ import Logger from '@/lib/logger'
 import read from '@/lib/source.reader'
 
 import db from '@/lib/db'
-import { eq, and, or } from 'drizzle-orm'
+import { eq, and, or, isNull } from 'drizzle-orm'
 import { alias } from 'drizzle-orm/pg-core'
 import * as t from '@/lib/db/schema'
 
@@ -80,7 +80,7 @@ export default async () => {
                 .leftJoin(parent, eq(t.account.parentId, parent.id))
                 .where(
                     and(
-                        eq(parent, null),
+                        isNull(parent),
                         or(
                             eq(t.account.type, accountTypes.DEALER),
                             eq(t.account.type, accountTypes.HAPISTORE),
@@ -89,7 +89,7 @@ export default async () => {
                 )
 
             if (orphans.length) {
-                throw new Error(`Found ${orphans.length} orphaned accounts`)
+                throw new Error(`Found ${orphans.length} orphan records`)
             }
         })
 

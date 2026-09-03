@@ -9,8 +9,6 @@ import Logger from '@/lib/logger'
 import read from '@/lib/source.reader'
 
 import db from '@/lib/db'
-import { eq, and, or } from 'drizzle-orm'
-import { alias } from 'drizzle-orm/pg-core'
 import * as t from '@/lib/db/schema'
 
 type User = typeof t.user.$inferSelect

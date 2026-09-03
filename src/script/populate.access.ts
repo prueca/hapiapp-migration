@@ -1,79 +1,60 @@
 import 'dotenv/config'
 import _ from 'lodash'
-import z from 'zod'
-import { Op } from 'sequelize'
 import path from 'path'
 
-import db, { sequelize } from '@/lib/db'
 import Logger from '@/lib/logger'
 import read from '@/lib/source.reader'
+
+import db from '@/lib/db'
+import { eq, or, isNull } from 'drizzle-orm'
+import { alias } from 'drizzle-orm/pg-core'
+import * as t from '@/lib/db/schema'
+
+type Access = {
+    userId: string
+    accountId: string
+}
 
 const logger = new Logger('populate:access')
 
 export default async () => {
-    const source = path.join(__dirname, '../mock/user.csv')
-    const forceSync = true
-    const transaction = await sequelize.transaction()
-
     try {
-        logger.print('Establishing database connection...')
-        await sequelize.authenticate()
+        const source = path.join(__dirname, '../mock/user.csv')
+        let records: Json[] = await read(source)
 
-        logger.print('Creating table...')
-        await db.Access.sync({ force: forceSync })
+        records = await Promise.all(
+            _.map(records, async (x) => {
+                const record = {
+                    userId: x.id,
+                    accountId: x.account_id,
+                }
 
-        const schema = z.object({
-            userId: z.ulid(),
-            accountId: z.ulid(),
-        })
+                return record
+            }),
+        )
 
-        /**
-         * Populate table
-         */
+        logger.print('Populating access table...')
 
-        const users = await read(source)
+        await db.transaction(async (txn) => {
+            await txn.insert(t.access).values(records as Access[])
 
-        let access = _.map(users, (item) => {
-            let record: Json = {
-                userId: item.id,
-                accountId: item.account_id,
+            const account = alias(t.account, 'account')
+            const user = alias(t.user, 'user')
+
+            const orphans = await txn
+                .select({ account, user })
+                .from(t.access)
+                .leftJoin(account, eq(t.access.accountId, account.id))
+                .leftJoin(user, eq(t.access.userId, user.id))
+                .where(or(isNull(account), isNull(user)))
+
+            if (orphans.length) {
+                throw new Error(`Found ${orphans.length} orphan records`)
             }
-
-            record = schema.parse(record)
-
-            return record
         })
 
-        await db.Access.bulkCreate(access, { transaction })
-        logger.print(`Inserted ${access.length} records.`)
-
-        const orphaned = await db.Access.findAll({
-            include: [
-                {
-                    model: db.User,
-                    as: 'user',
-                    required: false,
-                },
-                {
-                    model: db.Account,
-                    as: 'account',
-                    required: false,
-                },
-            ],
-            where: {
-                [Op.or]: [{ '$user.id$': null }, { '$account.id$': null }],
-            },
-            transaction,
-        })
-
-        if (orphaned.length) {
-            throw new Error(`Found ${orphaned.length} orphaned access`)
-        }
-
-        await transaction.commit()
+        logger.print(`Inserted ${records.length} records`)
     } catch (e: any) {
-        await transaction.rollback()
-
         logger.print(e.message)
         logger.print(e.stack)
     }
