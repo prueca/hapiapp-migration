@@ -4,10 +4,16 @@ import z from 'zod'
 import * as argon2 from 'argon2'
 import path from 'node:path'
 
-import db, { sequelize } from '@/lib/db'
 import userRoles from '@/lib/user.roles'
 import Logger from '@/lib/logger'
 import read from '@/lib/source.reader'
+
+import db from '@/lib/db'
+import { eq, and, or } from 'drizzle-orm'
+import { alias } from 'drizzle-orm/pg-core'
+import * as t from '@/lib/db/schema'
+
+type User = typeof t.user.$inferSelect
 
 const logger = new Logger('populate:user')
 
@@ -32,25 +38,12 @@ const schema = z.object({
 })
 
 export default async () => {
-    const source = path.join(__dirname, '../mock/user.csv')
-    const forceSync = true
-    const transaction = await sequelize.transaction()
-
     try {
-        logger.print('Establishing database connection...')
-        await sequelize.authenticate()
+        const source = path.join(__dirname, '../mock/user.csv')
+        let records: Json[] = await read(source)
 
-        logger.print('Creating table...')
-        await db.User.sync({ force: forceSync })
-
-        /**
-         * Populate table
-         */
-
-        let users = await read(source)
-
-        users = await Promise.all(
-            _.map(users, async (x) => {
+        records = await Promise.all(
+            _.map(records, async (x) => {
                 x = _.mapKeys(x, (v, k) => _.camelCase(k))
 
                 x.active = x.status == 'active'
@@ -63,13 +56,14 @@ export default async () => {
             }),
         )
 
-        await db.User.bulkCreate(users, { transaction })
-        logger.print(`Inserted ${users.length} records.`)
+        logger.print('Populating user table...')
 
-        await transaction.commit()
+        await db.transaction(async (txn) => {
+            await txn.insert(t.user).values(records as User[])
+        })
+
+        logger.print(`Inserted ${records.length} records`)
     } catch (e: any) {
-        await transaction.rollback()
-
         logger.print(e.message)
         logger.print(e.stack)
     }

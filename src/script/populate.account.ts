@@ -42,9 +42,8 @@ const schema = z
     })
 
 export default async () => {
-    const source = path.join(__dirname, '../mock/account.csv')
-
     try {
+        const source = path.join(__dirname, '../mock/account.csv')
         let records: Json[] = await read(source)
 
         records = _.map(records, (x) => {
@@ -65,8 +64,9 @@ export default async () => {
         // Mock data already has Ids, so we need to infer
         // the type of the records to match the database schema
 
+        logger.print('Populating account table...')
+
         await db.transaction(async (txn) => {
-            logger.print('Populating account table...')
             await txn.insert(t.account).values(records as Account[])
 
             // Check for any record that has parentId but
