@@ -1,4 +1,11 @@
-import { pgTable, varchar, pgEnum, boolean, unique } from 'drizzle-orm/pg-core'
+import {
+    pgTable,
+    varchar,
+    pgEnum,
+    boolean,
+    unique,
+    timestamp,
+} from 'drizzle-orm/pg-core'
 import ulid from '@/lib/ulid'
 import accountTypes from '@/lib/account.types'
 import userRoles from '@/lib/user.roles'
@@ -31,6 +38,10 @@ export const account = pgTable('account', {
     isrCode: varchar('isr_code', { length: 20 }),
     sapCode: varchar('sap_code', { length: 20 }),
     companyCode: varchar('company_code', { length: 20 }).unique().notNull(),
+
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+    updatedAt: timestamp('updated_at').defaultNow().notNull(),
+    deletedAt: timestamp('deleted_at'),
 })
 
 export const user = pgTable('user', {
@@ -47,6 +58,10 @@ export const user = pgTable('user', {
 
     username: varchar('username', { length: 255 }).notNull(),
     password: varchar('password', { length: 255 }).notNull(),
+
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+    updatedAt: timestamp('updated_at').defaultNow().notNull(),
+    deletedAt: timestamp('deleted_at'),
 })
 
 export const access = pgTable(
@@ -63,6 +78,10 @@ export const access = pgTable(
         accountId: varchar('account_id', { length: 26 })
             .references(() => account.id)
             .notNull(),
+
+        createdAt: timestamp('created_at').defaultNow().notNull(),
+        updatedAt: timestamp('updated_at').defaultNow().notNull(),
+        deletedAt: timestamp('deleted_at'),
     },
     (t) => [unique('access_user_account_unique').on(t.userId, t.accountId)],
 )

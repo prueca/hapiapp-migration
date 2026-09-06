@@ -44,8 +44,14 @@ export default async () => {
             _.map(records, async (x) => {
                 x = _.mapKeys(x, (v, k) => _.camelCase(k))
 
-                x.active = x.status == 'active'
-                delete x.status
+                _.assign(x, {
+                    active: x.status === 'active',
+                    createdAt: new Date(x.createdAt),
+                    updatedAt: new Date(x.updatedAt),
+                    deletedAt: null,
+                })
+
+                _.unset(x, 'status')
 
                 const data = schema.parse(x)
                 data.password = await argon2.hash(data.password)

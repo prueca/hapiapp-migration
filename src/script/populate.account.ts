@@ -32,6 +32,9 @@ const schema = z
         companyCode: z.string().nonempty(),
         parentId: z.ulid().or(z.null()).or(z.string()),
         active: z.boolean(),
+        createdAt: z.date(),
+        updatedAt: z.date(),
+        deletedAt: z.null(),
     })
     .refine((data) => {
         if (data.type === accountTypes.DISTRIBUTOR) {
@@ -49,8 +52,14 @@ export default async () => {
         records = _.map(records, (x) => {
             x = _.mapKeys(x, (v, k) => _.camelCase(k))
 
-            x.active = x.status === 'active'
-            delete x.status
+            _.assign(x, {
+                active: x.status === 'active',
+                createdAt: new Date(x.createdAt),
+                updatedAt: new Date(x.updatedAt),
+                deletedAt: null,
+            })
+
+            _.unset(x, 'status')
 
             const data = schema.parse(x)
 
