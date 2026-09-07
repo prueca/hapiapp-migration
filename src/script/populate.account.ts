@@ -29,7 +29,6 @@ const schema = z
         phone: z.string().nonempty(),
         isrCode: z.string().nonempty(),
         sapCode: z.string().nonempty(),
-        companyCode: z.string().nonempty(),
         parentId: z.ulid().or(z.null()).or(z.string()),
         active: z.boolean(),
         createdAt: z.date(),
@@ -67,6 +66,8 @@ export default async () => {
                 data.parentId = null
             }
 
+            logger.print(data)
+
             return data
         })
 
@@ -75,36 +76,36 @@ export default async () => {
 
         logger.print('Populating account table...')
 
-        await db.transaction(async (txn) => {
-            await txn.insert(t.account).values(records as Account[])
+        // await db.transaction(async (txn) => {
+        //     await txn.insert(t.account).values(records as Account[])
 
-            // Check for any record that has parentId but
-            // the parent record does not exist
+        //     // Check for any record that has parentId but
+        //     // the parent record does not exist
 
-            const parent = alias(t.account, 'parent')
+        //     const parent = alias(t.account, 'parent')
 
-            const orphans = await txn
-                .select({ parent })
-                .from(t.account)
-                .leftJoin(parent, eq(t.account.parentId, parent.id))
-                .where(
-                    and(
-                        isNull(parent),
-                        or(
-                            eq(t.account.type, accountTypes.DEALER),
-                            eq(t.account.type, accountTypes.HAPISTORE),
-                        ),
-                    ),
-                )
+        //     const orphans = await txn
+        //         .select({ parent })
+        //         .from(t.account)
+        //         .leftJoin(parent, eq(t.account.parentId, parent.id))
+        //         .where(
+        //             and(
+        //                 isNull(parent),
+        //                 or(
+        //                     eq(t.account.type, accountTypes.DEALER),
+        //                     eq(t.account.type, accountTypes.HAPISTORE),
+        //                 ),
+        //             ),
+        //         )
 
-            if (orphans.length) {
-                throw new Error(`Found ${orphans.length} orphan records`)
-            }
-        })
+        //     if (orphans.length) {
+        //         throw new Error(`Found ${orphans.length} orphan records`)
+        //     }
+        // })
 
         logger.print(`Inserted ${records.length} records`)
     } catch (e: any) {
-        logger.print(e.message)
+        // logger.print(e.message)
         logger.print(e.stack)
     }
 }

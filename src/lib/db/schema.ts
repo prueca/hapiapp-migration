@@ -32,12 +32,11 @@ export const account = pgTable('account', {
     active: boolean('active').notNull().default(true),
     parentId: varchar('parent_id', { length: 26 }),
 
-    name: varchar('name', { length: 255 }).notNull(),
+    name: varchar('name', { length: 255 }).notNull().unique(),
     address: varchar('address', { length: 255 }),
     phone: varchar('phone', { length: 32 }),
     isrCode: varchar('isr_code', { length: 20 }),
     sapCode: varchar('sap_code', { length: 20 }),
-    companyCode: varchar('company_code', { length: 20 }).unique().notNull(),
 
     createdAt: timestamp('created_at').defaultNow().notNull(),
     updatedAt: timestamp('updated_at').defaultNow().notNull(),

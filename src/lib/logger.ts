@@ -5,7 +5,11 @@ export default class Logger {
         this.label = label
     }
 
-    print(message: string) {
-        console.log(`[${this.label}] ${message}`)
+    print(arg: string | object) {
+        if (typeof arg === 'object') {
+            arg = JSON.stringify(arg, null, 2)
+        }
+
+        console.log(`[${this.label}] ${arg}`)
     }
 }
